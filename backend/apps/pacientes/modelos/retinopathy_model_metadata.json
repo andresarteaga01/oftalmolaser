@@ -1,0 +1,31 @@
+{
+  "model_name": "CNN Retinopat\u00eda Diab\u00e9tica",
+  "version": "1.0",
+  "framework": "TensorFlow/Keras",
+  "converted_from": "NumPy optimizado",
+  "original_accuracy": 0.897265625,
+  "input_shape": [
+    96,
+    96,
+    3
+  ],
+  "num_classes": 5,
+  "classes": [
+    "No DR",
+    "Mild",
+    "Moderate",
+    "Severe",
+    "PDR"
+  ],
+  "preprocessing": {
+    "resize_to": [
+      96,
+      96
+    ],
+    "normalize": "0-1",
+    "color_mode": "rgb"
+  },
+  "gradcam_compatible": true,
+  "web_ready": true,
+  "conversion_date": "2025-01-24"
+}

@@ -1,0 +1,25 @@
+{
+  "model_name": "CNN Retinopatía Diabética - GradCAM",
+  "version": "1.0",
+  "framework": "TensorFlow/Keras",
+  "gradcam_layer": "conv2d_2",
+  "gradcam_compatible": true,
+  "input_shape": [
+    96,
+    96,
+    3
+  ],
+  "num_classes": 5,
+  "classes": [
+    "No DR",
+    "Mild",
+    "Moderate",
+    "Severe",
+    "PDR"
+  ],
+  "usage_example": {
+    "load_model": "model = tf.keras.models.load_model('retinopathy_model_gradcam.keras')",
+    "get_gradcam_layer": "conv_layer = model.get_layer('conv2d_2')",
+    "create_gradcam": "gradcam_model = tf.keras.Model(inputs=model.input, outputs=[model.output, conv_layer.output])"
+  }
+}

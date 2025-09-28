@@ -1,0 +1,56 @@
+
+# ───── 🔧 Django y API ─────
+Django==3.2.15
+djangorestframework==3.13.1
+django-cors-headers==3.13.0
+django-environ==0.9.0
+djangorestframework-simplejwt==5.2.2
+django-filter>=22.1
+
+# ───── 🔐 Seguridad y Password Hashing ─────
+argon2-cffi==21.3.0
+argon2-cffi-bindings==21.2.0
+
+# ───── 📦 Almacenamiento y AWS ─────
+boto3==1.24.41
+django-storages==1.12.3
+Pillow==9.2.0
+
+# ───── 🧠 Machine Learning ─────
+tensorflow==2.17.0
+opencv-python-headless>=4.8
+numpy>=1.23
+pandas>=1.5
+scikit-learn>=1.2
+matplotlib>=3.6
+
+# ───── 🐘 PostgreSQL ─────
+psycopg2==2.9.3
+
+# ───── 🌐 Producción ─────
+gunicorn==20.1.0
+whitenoise==6.2.0
+
+# ───── 📝 Rich Text Editor (si lo usas) ─────
+django-ckeditor==6.3.2
+djoser
+django-import-export==2.8.0
+
+# ───── 🔒 Seguridad ─────
+python-magic==0.4.27
+django-redis==5.2.0
+redis==4.5.4
+
+# ───── ⚡ Performance ─────
+celery==5.2.7
+django-celery-beat==2.4.0
+django-celery-results==2.4.0
+
+# ───── 📊 Monitoring ─────
+sentry-sdk==1.29.2
+psutil==5.9.5
+
+# ───── 📄 PDF Generation ─────
+reportlab==4.0.4
+PyPDF2==3.0.1
+pillow==9.2.0
