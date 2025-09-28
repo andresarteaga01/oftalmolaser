@@ -1,6 +1,6 @@
 
 # ───── 🔧 Django y API ─────
-Django>=4.2.0,<5.0
+Django==3.2.15
 djangorestframework==3.13.1
 django-cors-headers==3.13.0
 django-environ==0.9.0
@@ -28,8 +28,8 @@ matplotlib>=3.6
 psycopg2-binary>=2.9.7
 
 # ───── 🌐 Producción ─────
-gunicorn>=21.2.0
-whitenoise>=6.6.0
+gunicorn==20.1.0
+whitenoise==6.2.0
 
 # ───── 📝 Rich Text Editor (si lo usas) ─────
 django-ckeditor==6.3.2
@@ -39,10 +39,10 @@ django-import-export==2.8.0
 # ───── 🔒 Seguridad ─────
 python-magic==0.4.27
 django-redis==5.2.0
-redis>=5.0.0
+redis==4.5.4
 
 # ───── ⚡ Performance ─────
-celery>=5.3.0
+celery==5.2.7
 django-celery-beat==2.4.0
 django-celery-results==2.4.0
 
