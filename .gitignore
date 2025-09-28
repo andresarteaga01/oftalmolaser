@@ -1,0 +1,68 @@
+# 🔒 Security - Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+backend/.env
+backend/core/.env
+frontend/.env
+
+# 📊 Development
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+backend/venv/
+backend/env/
+
+# 🗄️ Database
+*.sqlite3
+*.db
+db.sqlite3
+
+# 📝 Logs
+*.log
+logs/
+*.log.*
+
+# 🏗️ Build directories
+frontend/build/
+frontend/dist/
+backend/static/
+backend/staticfiles/
+backend/media/
+
+# 📦 Dependencies
+node_modules/
+*.egg-info/
+
+# 🔧 IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 🖥️ OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+
+# 🧪 Testing
+.coverage
+htmlcov/
+.tox/
+.cache
+.pytest_cache/
+
+# 🚀 Production
+*.production
+*.staging
