@@ -14,7 +14,7 @@ argon2-cffi-bindings==21.2.0
 # ───── 📦 Almacenamiento y AWS ─────
 boto3==1.24.41
 django-storages==1.12.3
-Pillow==9.2.0
+Pillow>=10.0.0
 
 # ───── 🧠 Machine Learning ─────
 tensorflow==2.17.0
@@ -25,7 +25,7 @@ scikit-learn>=1.2
 matplotlib>=3.6
 
 # ───── 🐘 PostgreSQL ─────
-psycopg2==2.9.3
+psycopg2-binary>=2.9.7
 
 # ───── 🌐 Producción ─────
 gunicorn==20.1.0
