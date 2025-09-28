@@ -53,4 +53,3 @@ psutil==5.9.5
 # ───── 📄 PDF Generation ─────
 reportlab==4.0.4
 PyPDF2==3.0.1
-pillow==9.2.0
