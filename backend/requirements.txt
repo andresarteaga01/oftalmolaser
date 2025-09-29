@@ -37,7 +37,6 @@ djoser
 django-import-export==2.8.0
 
 # ───── 🔒 Seguridad ─────
-python-magic==0.4.27
 django-redis==5.2.0
 redis==4.5.4
 

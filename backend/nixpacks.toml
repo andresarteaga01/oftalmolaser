@@ -1,8 +1,0 @@
-[phases.setup]
-aptPkgs = ["libmagic1", "libmagic-dev"]
-
-[phases.build]
-cmds = ["pip install -r requirements.txt"]
-
-[start]
-cmd = "gunicorn core.wsgi:application --bind 0.0.0.0:$PORT --timeout 180 --workers 1 --preload"

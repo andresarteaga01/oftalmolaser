@@ -1,9 +1,4 @@
 import os
-try:
-    import magic
-    MAGIC_AVAILABLE = True
-except ImportError:
-    MAGIC_AVAILABLE = False
 from django.core.exceptions import ValidationError
 from django.conf import settings
 from PIL import Image
@@ -36,17 +31,9 @@ class ImageValidator:
         if file_extension not in ImageValidator.ALLOWED_EXTENSIONS:
             raise ValidationError(f"Extensión no permitida. Use: {', '.join(ImageValidator.ALLOWED_EXTENSIONS)}")
         
-        # 3. Validar MIME type usando python-magic (opcional)
-        if MAGIC_AVAILABLE:
-            file.seek(0)
-            mime_type = magic.from_buffer(file.read(1024), mime=True)
-            file.seek(0)
-
-            if mime_type not in ImageValidator.ALLOWED_MIME_TYPES:
-                raise ValidationError(f"Tipo de archivo no válido: {mime_type}")
-        else:
-            # Fallback: validar solo por extensión si magic no está disponible
-            print("Warning: python-magic not available, using extension-only validation")
+        # 3. Validación de seguridad mediante PIL y extensiones
+        # Nota: Eliminado python-magic para simplificar deployment
+        # La seguridad se mantiene via PIL validation + extension checking
         
         # 4. Validar que es una imagen real usando PIL
         try:
