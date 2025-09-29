@@ -7,16 +7,22 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         User = get_user_model()
 
-        if not User.objects.filter(username='admin').exists():
+        if not User.objects.filter(email='admin@gmail.com').exists():
             User.objects.create_superuser(
-                username='admin',
                 email='admin@gmail.com',
+                username='admin',
                 password='Admin1'
             )
             self.stdout.write(
-                self.style.SUCCESS('✅ Superuser "admin" created successfully!')
+                self.style.SUCCESS('✅ Superuser admin@gmail.com created successfully!')
             )
         else:
+            # Si ya existe, resetear la contraseña
+            user = User.objects.get(email='admin@gmail.com')
+            user.set_password('Admin1')
+            user.is_superuser = True
+            user.is_staff = True
+            user.save()
             self.stdout.write(
-                self.style.WARNING('⚠️ Superuser "admin" already exists.')
+                self.style.SUCCESS('✅ Superuser admin@gmail.com password reset to Admin1')
             )
