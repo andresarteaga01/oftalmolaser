@@ -40,6 +40,15 @@ RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
+# Railway.app deployment
+RAILWAY_PUBLIC_DOMAIN = os.environ.get('RAILWAY_PUBLIC_DOMAIN')
+if RAILWAY_PUBLIC_DOMAIN:
+    ALLOWED_HOSTS.append(RAILWAY_PUBLIC_DOMAIN)
+
+# Add Railway domain directly
+ALLOWED_HOSTS.append('oftalmolaser-production.up.railway.app')
+ALLOWED_HOSTS.append('*.railway.app')
+
 # Additional allowed hosts from environment
 ADDITIONAL_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
 ALLOWED_HOSTS.extend([host.strip() for host in ADDITIONAL_HOSTS if host.strip()])
