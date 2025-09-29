@@ -29,11 +29,20 @@ ALLOWED_HOSTS = [
 CORS_ALLOWED_ORIGINS = env.list('CORS_ALLOWED_ORIGINS', default=[
     'http://localhost:3000',
     'https://oftalmolaser.com',
+    'https://oftalmolaser.vercel.app',
 ])
 
 CORS_ORIGIN_WHITELIST = CORS_ALLOWED_ORIGINS
 
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
+
+# Additional CORS settings for Railway deployment
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.vercel\.app$",
+    r"^https://.*\.railway\.app$",
+]
 
 # Render.com deployment
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
